@@ -1,18 +1,22 @@
 public class Robot implements RunnableAndJumpable{
     private String name;
+    private int runDistance;
+    private int jumpHeight;
 
-    public Robot(String name) {
+    public Robot(String name, int runDistance, int jumpHeight) {
         this.name = name;
+        this.runDistance = runDistance;
+        this.jumpHeight = jumpHeight;
     }
 
     @Override
-    public void jump() {
-
+    public int jump() {
+        return jumpHeight;
     }
 
     @Override
-    public void run() {
-
+    public int run() {
+        return runDistance;
     }
 
     @Override
